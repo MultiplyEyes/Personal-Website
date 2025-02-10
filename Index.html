@@ -1,27 +1,16 @@
 <head>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
     <style>
         body { margin: 0; }
     </style>
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.173.0/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.173.0/examples/jsm/"
-          }
-        }
-      </script>
 </head>
 <body>
-    <script type = "module" src = "main.js"></script>
-    <header>
-        <h1>Matthijs</h1>
-    </header>
-    <ul id = "facts">
-        <h2>Facts</h2>
-        <li>Games</li>
-        <li>3D models</li>
-        <li>Fantasy</li>
-    </ul>
-    
+    <div id = "container">
+      <button onclick="FactsBox()" class="box" id = fact></button>
+      <button class="box" id = goals></button>
+      <button class="box" id = Hobby></button>
+    </div>
+    <div id = "jump-man"></div>
 </body>
+
