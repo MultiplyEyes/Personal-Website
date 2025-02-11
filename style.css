@@ -4,7 +4,8 @@ html
 }
 body
 {
-    background-color: #87EBD6;
+    background-image: 
+    linear-gradient(#1c96c5, #cfecf7, #cfecf7 );
 }
 
 #sky
@@ -240,8 +241,9 @@ body
 {
     width: 100%;
     height: 100;
-    background-color: brown;
     margin-bottom: 0;
+    background-image: 
+    linear-gradient(#3f9b0b, #9e3333);
 }
 #text
 {

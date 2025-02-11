@@ -38,7 +38,7 @@ function sleep(ms)
 // querySelector naar je button
 // addEventListener click op die button
 // Call ModelBox
-// source : jSon Teacher
+// source : jSon Teacher Krijn
 
 let hobbyEvent = document.getElementById('Hobby');
 hobbyEvent.addEventListener('click', ModelBox);
