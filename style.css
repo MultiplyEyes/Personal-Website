@@ -4,34 +4,67 @@ html
 }
 body
 {
-    background-image: 
-    linear-gradient(#1c96c5, #cfecf7, #cfecf7 );
+    background-image: linear-gradient(#1c96c5, #cfecf7, #cfecf7 );
 }
-
 #sky
 {
-    display: flex;
     width: 100%;
-    position: fixed;
+    height: 100;
 }
-
+#sky :nth-child(1)
+{
+    height: 100;
+    width: 200;
+    animation: clouds 20s linear infinite;
+    background-image: url("Animation/Cloud.svg");
+}
+#sky :nth-child(2)
+{
+    height: 50;
+    width: 100;
+    animation: clouds 40s linear infinite;
+    background-image: url("Animation/CloudSmall.png")
+}
+#sky :nth-child(3)
+{
+    height: 20;
+    width: 40;
+    animation: clouds 50s linear infinite;
+    background-image: url("Animation/Cloud.svg");
+}
+#sky :nth-child(4)
+{
+    height: 80;
+    width: 160;
+    animation: clouds 30s linear infinite;
+    background-image: url("Animation/CloudSmall.png")
+}
+#sky :nth-child(5)
+{
+    height: 100;
+    width: 200;
+    animation: clouds 20s linear infinite;
+    background-image: url("Animation/Cloud.svg");
+}
+#sky :nth-child(6)
+{
+    height: 50;
+    width: 100;
+    animation: clouds 40s linear infinite;
+    background-image: url("Animation/CloudSmall.png")
+}
 .cloud
 {
-    /* source : https://css-shape.com/cloud/ */
-    height: 180px;
-    aspect-ratio: 1.8;
-    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
-    mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
-    background: #dbdedf;
-    animation: clouds 15s linear infinite;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 @keyframes clouds {
     0% {
-        translate: -50vw 0;
+        translate: -10vw 0;
     }
 
     100% {
-        translate: 100vw 0;
+        translate: 80vw 0;
     }
 }
 
@@ -91,7 +124,7 @@ body
         background-image: url(Animation/Mattio2.svg);
     }
     55% {
-        translate: 19vw -210px;
+        translate: 19vw -310px;
         background-image: url(Animation/Mattio1.svg);
     }
     70% {
@@ -142,7 +175,7 @@ body
         background-image: url(Animation/Mattio2.svg);
     }
     55% {
-        translate: 46vw -210px;
+        translate: 46vw -310px;
         background-image: url(Animation/Mattio1.svg);
     }
     70% {
@@ -202,7 +235,7 @@ body
         background-image: url(Animation/Mattio2.svg);
     }
     55% {
-        translate: 73vw -210px;
+        translate: 73vw -310px;
         background-image: url(Animation/Mattio1.svg);
     }
     70% {
@@ -248,15 +281,22 @@ body
 #text
 {
     margin-top: 0;
-    background-color: brown;
+    background-color: #9e3333;
+    max-width: 300;
 
 }
 #text-background
 {
     margin-top: 0;
-    background-color: brown;
+    background-color: #9e3333;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+.grass
+{
+    width: 10;
+    min-height: 10;
+    background-color: #3f9b0b;
 }

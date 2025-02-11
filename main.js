@@ -1,38 +1,53 @@
 const baseURL = "https://fdnd.directus.app/items/person/?filter={%22id%22:214}";
 const response = await fetch(baseURL);
 const lookForMyData = await response.json();
+var jumpMan = document.querySelector('#jump-man');
+var textBox = document.querySelector('#text');
 
+var busy = false;
+
+// source : CSS Teacher Sanne
 function FactBox()
 {
-    var jumpMan = document.querySelector('#jump-man');
-    jumpMan.classList.add('factani');
-    sleep(3000).then(() => { jumpMan.classList.remove('factani');});
-    var textBox = document.querySelector('#text');
-    sleep(2000).then(() => { textBox.innerHTML = "FACTS";});
+    if(!busy) {
+        busy = true;
+        jumpMan.classList.add('factani');
+        jumpMan.addEventListener("animationend", () => {
+            jumpMan.classList.remove('factani');
+            textBox.innerHTML = "FACTS";
+            busy = false;
+        })
+    }
+
 }
 
 function GoalBox()
 {
-    var jumpMan = document.querySelector('#jump-man');
-    jumpMan.classList.add('goalani');
-    sleep(3000).then(() => { jumpMan.classList.remove('goalani');});
-    var textBox = document.querySelector('#text');
-    sleep(2000).then(() => { textBox.innerHTML = "GOAL";});
+    // var jumpMan = document.querySelector('#jump-man');
+    if(!busy){
+        busy = true
+        jumpMan.classList.add('goalani');
+        jumpMan.addEventListener("animationend", () => {
+            jumpMan.classList.remove('goalani');
+            textBox.innerHTML = "Yes, indeed. It is called Lothric, Where the transitory lands of the Lords of Cinder converge. In venturing north, the pilgrims discover the truth of the old words. “The fire fades, and the lords go without thrones.”When the link of fire is threatened, the bell tolls, unearthing the old Lords of Cinder from their graves.Aldrich, Saint of the Deep.Farron’s Undead Legion, The Abyss Watchers. Yes, indeed. It is called Lothric, Where the transitory lands of the Lords of Cinder converge. In venturing north, the pilgrims discover the truth of the old words. “The fire fades, and the lords go without thrones.”When the link of fire is threatened, the bell tolls, unearthing the old Lords of Cinder from their graves.Aldrich, Saint of the Deep.Farron’s Undead Legion, The Abyss Watchers. Yes, indeed. It is called Lothric, Where the transitory lands of the Lords of Cinder converge. In venturing north, the pilgrims discover the truth of the old words. “The fire fades, and the lords go without thrones.”When the link of fire is threatened, the bell tolls, unearthing the old Lords of Cinder from their graves.Aldrich, Saint of the Deep.Farron’s Undead Legion, The Abyss Watchers.";
+            busy = false;
+        })
+    }
 }
 
 function ModelBox()
 {
-    var jumpMan = document.querySelector('#jump-man');
-    jumpMan.classList.add('modelani');
-    sleep(4000).then(() => { jumpMan.classList.remove('modelani');});
-    var textBox = document.querySelector('#text');
-    sleep(2500).then(() => { textBox.innerHTML = lookForMyData.data[0].name;});
-}
+    if(!busy) {
+        busy = true;
+        // var jumpMan = document.querySelector('#jump-man');
+        jumpMan.classList.add('modelani');
 
-// source : https://www.sitepoint.com/delay-sleep-pause-wait/
-function sleep(ms) 
-{
-    return new Promise(resolve => setTimeout(resolve, ms));
+        jumpMan.addEventListener("animationend", () => {
+            jumpMan.classList.remove('modelani');
+            textBox.innerHTML = lookForMyData.data[0].name;
+            busy = false;
+        })
+    }
 }
 
 // querySelector naar je button
