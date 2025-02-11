@@ -24,29 +24,66 @@ html
     width: 100px;
     height: 100px;
     position: relative;
+
     
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url(Animation/Mattio2.svg);
 }
 
-#jump-man:hover {
-    animation-name: JUMP;
-    animation-duration: 2s;
-    /* animation-iteration-count: infinite; */
+.animeermij {
+    animation-name: JUMP-FACT;
+
+    animation-duration: 3s;
     animation-direction: alternate;
 }
 
-@keyframes JUMP 
+@keyframes JUMP-FACT
 {
     0% { 
+        background-image: url(Animation/Mattio2.svg);
+    }
+    10% { 
+        background-image: url(Animation/Mattio3.svg);
+    }
+    20% { 
+        background-image: url(Animation/Mattio4.svg);
+    }
+    30% { 
+        background-image: url(Animation/Mattio3.svg);
+    }
+    40% {
+        translate: 19vw 0;
+    }
+    50% {
+        translate: 19vw 0;
+        background-image: url(Animation/Mattio2.svg);
+    }
+    65% {
+        translate: 19vw -30vh;
         background-image: url(Animation/Mattio1.svg);
     }
-    40%,60% {
-        translate: 0 -5em;
+    80% {
+        translate: 19vw 0;
     }
     100% {
 
-        background-image: url(Animation/Mattio1.svg);
+        background-image: url(Animation/Mattio2.svg);
     }
+}
+
+#animation
+{
+    margin-top: 200;
+}
+
+#ground
+{
+    width: 100%;
+    height: 100;
+    background-color: brown;
+}
+#text
+{
+    margin-top: 0;
 }
