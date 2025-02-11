@@ -6,7 +6,7 @@ var textBox = document.querySelector('#text');
 
 var busy = false;
 
-// source : CSS Teacher Sanne
+// source refacter: CSS Teacher Sanne
 function FactBox()
 {
     if(!busy) {
@@ -14,7 +14,7 @@ function FactBox()
         jumpMan.classList.add('factani');
         jumpMan.addEventListener("animationend", () => {
             jumpMan.classList.remove('factani');
-            textBox.innerHTML = "FACTS";
+            // textBox.innerHTML = "FACTS";
             busy = false;
         })
     }
@@ -44,7 +44,7 @@ function ModelBox()
 
         jumpMan.addEventListener("animationend", () => {
             jumpMan.classList.remove('modelani');
-            textBox.innerHTML = lookForMyData.data[0].name;
+            // textBox.innerHTML = lookForMyData.data[0].name;
             busy = false;
         })
     }
@@ -53,7 +53,7 @@ function ModelBox()
 // querySelector naar je button
 // addEventListener click op die button
 // Call ModelBox
-// source : jSon Teacher Krijn
+// source refacter: jSon Teacher Krijn
 
 let hobbyEvent = document.getElementById('Hobby');
 hobbyEvent.addEventListener('click', ModelBox);

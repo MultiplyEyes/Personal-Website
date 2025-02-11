@@ -43,14 +43,14 @@ body
 {
     height: 100;
     width: 200;
-    animation: clouds 20s linear infinite;
+    animation: clouds 16s linear infinite;
     background-image: url("Animation/Cloud.svg");
 }
 #sky :nth-child(6)
 {
     height: 50;
     width: 100;
-    animation: clouds 40s linear infinite;
+    animation: clouds 45s linear infinite;
     background-image: url("Animation/CloudSmall.png")
 }
 .cloud
@@ -64,7 +64,7 @@ body
     }
 
     100% {
-        translate: 80vw 0;
+        translate: 100vw 0;
     }
 }
 
