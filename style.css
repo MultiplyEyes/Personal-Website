@@ -2,6 +2,37 @@ html
 {
     overflow: hidden;
 }
+body
+{
+    background-color: #87EBD6;
+}
+
+#sky
+{
+    display: flex;
+    width: 100%;
+    position: fixed;
+}
+
+.cloud
+{
+    /* source : https://css-shape.com/cloud/ */
+    height: 180px;
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: #dbdedf;
+    animation: clouds 15s linear infinite;
+}
+@keyframes clouds {
+    0% {
+        translate: -50vw 0;
+    }
+
+    100% {
+        translate: 100vw 0;
+    }
+}
 
 #container
 {
@@ -31,9 +62,8 @@ html
     background-image: url(Animation/Mattio2.svg);
 }
 
-.animeermij {
+.factani {
     animation-name: JUMP-FACT;
-
     animation-duration: 3s;
     animation-direction: alternate;
 }
@@ -55,16 +85,145 @@ html
     40% {
         translate: 19vw 0;
     }
-    50% {
+    45% {
         translate: 19vw 0;
         background-image: url(Animation/Mattio2.svg);
     }
-    65% {
-        translate: 19vw -30vh;
+    55% {
+        translate: 19vw -210px;
         background-image: url(Animation/Mattio1.svg);
     }
-    80% {
+    70% {
         translate: 19vw 0;
+        transform: scaleX(1);
+        background-image: url(Animation/Mattio3.svg);
+    }
+    80% {
+        transform: scaleX(-1);
+        background-image: url(Animation/Mattio4.svg);
+    }
+    90% {
+        transform: scaleX(-1);
+        background-image: url(Animation/Mattio3.svg);
+    }
+    100% {
+
+        background-image: url(Animation/Mattio2.svg);
+    }
+}
+
+.goalani {
+    animation-name: JUMP-GOAL;
+
+    animation-duration: 3s;
+    animation-direction: alternate;
+}
+
+@keyframes JUMP-GOAL
+{
+    0% { 
+        background-image: url(Animation/Mattio2.svg);
+    }
+    10% { 
+        background-image: url(Animation/Mattio3.svg);
+    }
+    20% { 
+        background-image: url(Animation/Mattio4.svg);
+    }
+    30% { 
+        background-image: url(Animation/Mattio3.svg);
+    }
+    40% {
+        translate: 46vw 0;
+    }
+    45% {
+        translate: 46vw 0;
+        background-image: url(Animation/Mattio2.svg);
+    }
+    55% {
+        translate: 46vw -210px;
+        background-image: url(Animation/Mattio1.svg);
+    }
+    70% {
+        translate: 46vw 0;
+        transform: scaleX(1);
+        background-image: url(Animation/Mattio3.svg);
+    }
+    80% {
+        transform: scaleX(-1);
+        background-image: url(Animation/Mattio4.svg);
+    }
+    90% {
+        transform: scaleX(-1);
+        background-image: url(Animation/Mattio3.svg);
+    }
+    100% {
+
+        background-image: url(Animation/Mattio2.svg);
+    }
+}
+
+.modelani {
+    animation-name: JUMP-MODEl;
+
+    animation-duration: 4s;
+    animation-direction: alternate;
+}
+
+@keyframes JUMP-MODEl
+{
+    0% { 
+        background-image: url(Animation/Mattio2.svg);
+    }
+    10% { 
+        background-image: url(Animation/Mattio3.svg);
+    }
+    15% { 
+        background-image: url(Animation/Mattio4.svg);
+    }
+    20% { 
+        background-image: url(Animation/Mattio3.svg);
+    }
+    25% { 
+        background-image: url(Animation/Mattio4.svg);
+    }
+    30% { 
+        background-image: url(Animation/Mattio3.svg);
+    }
+    35% { 
+        background-image: url(Animation/Mattio4.svg);
+    }
+    40% {
+        translate: 73vw 0;
+    }
+    45% {
+        translate: 73vw 0;
+        background-image: url(Animation/Mattio2.svg);
+    }
+    55% {
+        translate: 73vw -210px;
+        background-image: url(Animation/Mattio1.svg);
+    }
+    70% {
+        translate: 73vw 0;
+        transform: scaleX(1);
+        background-image: url(Animation/Mattio3.svg);
+    }
+    80% {
+        transform: scaleX(-1);
+        background-image: url(Animation/Mattio4.svg);
+    }
+    85% {
+        transform: scaleX(-1);
+        background-image: url(Animation/Mattio3.svg);
+    }
+    90% {
+        transform: scaleX(-1);
+        background-image: url(Animation/Mattio4.svg);
+    }
+    95% {
+        transform: scaleX(-1);
+        background-image: url(Animation/Mattio3.svg);
     }
     100% {
 
@@ -82,8 +241,20 @@ html
     width: 100%;
     height: 100;
     background-color: brown;
+    margin-bottom: 0;
 }
 #text
 {
     margin-top: 0;
+    background-color: brown;
+
+}
+#text-background
+{
+    margin-top: 0;
+    background-color: brown;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
