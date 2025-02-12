@@ -7,9 +7,12 @@ var textBox = document.querySelector('#text');
 var modalF = document.querySelector('#modal-fact');
 var modalG = document.querySelector('#modal-goals');
 var modalH = document.querySelector('#modal-hobby');
+
 var factTitle = document.querySelector('#fact-title');
+var factText = document.querySelector('#fact-text');
 
 factTitle.innerHTML += lookForMyData.data[0].name;
+factText.innerHTML = lookForMyData.data[0].bio;
 
 var busy = false;
 

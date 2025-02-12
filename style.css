@@ -2,9 +2,18 @@ html
 {
     overflow: hidden;
 }
+/* Source webstie font : https://www.cdnfonts.com/new-super-mario-font-u.font */
+@import url('https://fonts.cdnfonts.com/css/new-super-mario-font-u');
 body
 {
+    font-family: 'New Super Mario Font U', sans-serif;
     background-image: linear-gradient(#1c96c5, #cfecf7, #cfecf7 );
+}
+img
+{
+    width: 30vw;
+    max-width: 10em;
+    object-fit: cover;
 }
 #sky
 {
@@ -283,12 +292,13 @@ body
     background-image: 
     linear-gradient(#3f9b0b, #9e3333, #9e3333, #9e3333, #9e3333, #9e3333, #9e3333, #9e3333, #9e3333);
 }
-#modal-fact
+.visable
 {
     display: flex;
     justify-content: center;
     width: 80vw;
     max-width: 30em;
+    max-height: 20em;
     background-color: #ffc18c;
     z-index: 10;
     position: fixed;
@@ -299,7 +309,10 @@ body
     align-self: center;
     border-radius: 3%;
     transform: translateY(-50%);
-
+    overflow-y: scroll;
+}
+#modal-fact
+{
     opacity: 0;
     z-index: 20;
     padding: 2rem;
@@ -310,21 +323,6 @@ body
 }
 #modal-goals
 {
-    display: flex;
-    justify-content: center;
-    width: 80vw;
-    max-width: 30em;
-    background-color: #ffc18c;
-    z-index: 10;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    align-self: center;
-    border-radius: 3%;
-    transform: translateY(-50%);
-
     opacity: 0;
     z-index: 20;
     padding: 2rem;
@@ -332,24 +330,10 @@ body
 #modal-goals.visable
 {
     opacity: 1;
+    overflow-y: auto;
 }
 #modal-hobby
 {
-    display: flex;
-    justify-content: center;
-    width: 80vw;
-    max-width: 30em;
-    background-color: #ffc18c;
-    z-index: 10;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    align-self: center;
-    border-radius: 3%;
-    transform: translateY(-50%);
-
     opacity: 0;
     z-index: 20;
     padding: 2rem;
@@ -374,4 +358,11 @@ h2
     padding: 10;
     background-color: 	#da6d42;
     border-style: solid;
+    border-radius: 5cap;
+}
+#fact-page
+{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
 }
