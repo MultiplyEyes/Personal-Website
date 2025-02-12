@@ -288,6 +288,7 @@ body
     display: flex;
     justify-content: center;
     width: 80vw;
+    max-width: 30em;
     background-color: #ffc18c;
     z-index: 10;
     position: fixed;
@@ -304,6 +305,56 @@ body
     padding: 2rem;
 }
 #modal-fact.visable
+{
+    opacity: 1;
+}
+#modal-goals
+{
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    max-width: 30em;
+    background-color: #ffc18c;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    align-self: center;
+    border-radius: 3%;
+    transform: translateY(-50%);
+
+    opacity: 0;
+    z-index: 20;
+    padding: 2rem;
+}
+#modal-goals.visable
+{
+    opacity: 1;
+}
+#modal-hobby
+{
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    max-width: 30em;
+    background-color: #ffc18c;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    align-self: center;
+    border-radius: 3%;
+    transform: translateY(-50%);
+
+    opacity: 0;
+    z-index: 20;
+    padding: 2rem;
+}
+#modal-hobby.visable
 {
     opacity: 1;
 }
