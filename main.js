@@ -68,6 +68,14 @@ function ModelBox()
     }
 }
 
+function exitAllPage()
+{
+    for (let i = 0; i <visablePage.length; i++)
+    {
+        visablePage[i].remove('visable')
+    }
+}
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -85,6 +93,13 @@ goalEvent.addEventListener('click', GoalBox);
 
 let factEvent = document.getElementById('fact');
 factEvent.addEventListener('click', FactBox);
+
+let exitPage = document.getElementsByClassName('exit');
+let visablePage = document.getElementsByClassName('visable');
+for (let i = 0; i < exitPage.length; i++) 
+{
+    exitPage[i].addEventListener('click', exitAllPage);
+}
 
 console.log(lookForMyData);
 
