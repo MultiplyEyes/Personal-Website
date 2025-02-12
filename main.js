@@ -70,10 +70,9 @@ function ModelBox()
 
 function exitAllPage()
 {
-    for (let i = 0; i <visablePage.length; i++)
-    {
-        visablePage[i].remove('visable')
-    }
+    modalF.classList.remove('visable');
+    modalG.classList.remove('visable');
+    modalH.classList.remove('visable');
 }
 
 function sleep(ms) {
