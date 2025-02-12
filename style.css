@@ -2,6 +2,9 @@ html
 {
     overflow: hidden;
 }
+.visable::-webkit-scrollbar {
+    display: none;
+}
 /* Source webstie font : https://www.cdnfonts.com/new-super-mario-font-u.font */
 @import url('https://fonts.cdnfonts.com/css/new-super-mario-font-u');
 body
@@ -25,42 +28,47 @@ img
     z-index: -2;
     overflow-x: clip;
 }
-#sky :nth-child(1)
+#sky ul
 {
-    height: 100;
-    width: 200;
-    animation: clouds 20s linear infinite;
-    background-image: url("Animation/Cloud.svg");
+    list-style: none;
 }
-#sky :nth-child(2)
+
+#sky ul :nth-child(1)
 {
-    height: 50;
-    width: 100;
+    height: 40;
+    width: 80;
     animation: clouds 40s linear infinite;
     background-image: url("Animation/CloudSmall.png")
 }
-#sky :nth-child(3)
+#sky ul :nth-child(2)
+{
+    height: 20;
+    width: 40;
+    animation: clouds 0s linear infinite;
+    background-image: url("Animation/CloudSmall.png")
+}
+#sky ul :nth-child(3)
 {
     height: 20;
     width: 40;
     animation: clouds 50s linear infinite;
     background-image: url("Animation/Cloud.svg");
 }
-#sky :nth-child(4)
+#sky ul :nth-child(4)
 {
-    height: 80;
-    width: 160;
+    height: 70;
+    width: 140;
     animation: clouds 30s linear infinite;
     background-image: url("Animation/CloudSmall.png")
 }
-#sky :nth-child(5)
+#sky ul :nth-child(5)
 {
     height: 100;
     width: 200;
     animation: clouds 16s linear infinite;
     background-image: url("Animation/Cloud.svg");
 }
-#sky :nth-child(6)
+#sky ul :nth-child(6)
 {
     height: 50;
     width: 100;
@@ -98,6 +106,7 @@ img
     background-repeat: no-repeat;
     background-size: 100%;
     background-image: url(Animation/!.svg);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 #jump-man
@@ -140,7 +149,7 @@ img
         background-image: url(Animation/Mattio2.svg);
     }
     55% {
-        translate: 19vw -310px;
+        translate: 19vw -330px;
         background-image: url(Animation/Mattio1.svg);
     }
     70% {
@@ -191,7 +200,7 @@ img
         background-image: url(Animation/Mattio2.svg);
     }
     55% {
-        translate: 46vw -310px;
+        translate: 46vw -330px;
         background-image: url(Animation/Mattio1.svg);
     }
     70% {
@@ -251,7 +260,7 @@ img
         background-image: url(Animation/Mattio2.svg);
     }
     55% {
-        translate: 73vw -310px;
+        translate: 73vw -330px;
         background-image: url(Animation/Mattio1.svg);
     }
     70% {
@@ -312,6 +321,8 @@ img
     border-radius: 3%;
     transform: translateY(-50%);
     overflow-y: scroll;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
 }
 #modal-fact
 {
