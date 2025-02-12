@@ -9,6 +9,8 @@ var modalG = document.querySelector('#modal-goal');
 var modalH = document.querySelector('#modal-hobby');
 var factTitle = document.querySelector('#fact-title');
 
+var factExit = document.querySelector('#exit-goals');
+
 factTitle.innerHTML += lookForMyData.data[0].name;
 
 var busy = false;
